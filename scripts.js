@@ -1,6 +1,6 @@
 const endDate = new Date("Dec 24, 2024, 16:00:00").getTime();
 
-const callback = () => {
+const countdownFunc = () => {
   const dateNow = new Date().getTime();
   let timeLeft = endDate - dateNow;
   let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
@@ -12,4 +12,4 @@ const callback = () => {
     days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 };
 
-window.setInterval(callback, 1000);
+window.setInterval(countdownFunc, 1000);
